@@ -1,0 +1,302 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: "Helvetica Neue", helvetica, arial, "Hiragino Kaku Gothic ProN", "MS Gothic";
+    background-color: black;
+
+}
+body a{
+    color: white;
+    text-decoration: none;
+}
+.spacer {
+    height: 8px;
+    background-color: rgb(0, 0, 0); 
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1; 
+  }
+#left {
+    width: 24vw;
+    position: fixed;
+
+}
+
+#right {
+    width: 76vw;
+    margin-left: 24vw;
+}
+
+#home {
+    padding: 20px;
+
+}
+
+#home ul li {
+    display: flex;
+    width: 20px;
+    gap: 15px;
+    list-style: none;
+    font-weight: bold;
+    padding-top: 20px;
+
+}
+
+#home ul li a {
+    color: rgb(219, 212, 212);
+
+}
+
+.library {
+    /* min-height: 100%; */
+    min-height: 83vh;
+}
+
+.plus {
+    padding: 15px;
+}
+
+.lib2 {
+    margin: 20px 0;
+    padding: 13px 20px;
+}
+
+.btn {
+    padding: 8px 15px;
+    border-radius: 20px;
+    font-size: 15px;
+    font-weight: bold;
+    border: none;
+    margin-top: 20px;
+}
+
+.lib2 a {
+    color: rgb(15, 15, 15);
+}
+
+h4 {
+    text-wrap: nowrap;
+    padding: 4px 0;
+}
+
+.para {
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    margin: 5px 0;
+}
+
+.para1 {
+    color: white;
+    font-weight: bold;
+    font-size: 14px;
+    margin-top: 10px;
+}
+
+.heading {
+    display: flex;
+    font-weight: bold;
+    align-items: center;
+    padding: 0px 5px;
+    color: #a7a7a7;
+
+}
+.heading img{
+    filter: invert(.6);
+}
+.scroll {
+    height: 200px;
+}
+
+.footer-left {
+    display: flex;
+    font-size: 13px;
+    padding:40px 10px;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 15px
+}
+
+.footer-left a {
+    color: rgb(157, 157, 157);
+}
+
+.english {
+    display: flex;
+    color: white;
+    border: 1px solid grey;
+    gap: 4px;
+    margin: 5px;
+    padding: 7px 13px;
+    align-items: center;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    height: 60px;
+    margin-top: 8px;
+    position: sticky;
+    top: 8px;
+    z-index: 1;
+    border-radius:10px 10px 0 0 ;
+    width: 1153px;
+
+}
+
+.boxes {
+    /* height: 315px; */
+    padding: 30px 10px;
+    width: 1132px;
+
+}
+
+.cardcontainer {
+    display: flex;
+    justify-content: space-between;
+    
+}
+
+.card {
+    width: 226px;
+
+}
+
+.card img:first-child {
+    width: 205px;
+    height: 205px;
+    object-fit: cover;
+    border-radius: 17px;
+    padding: 10px;
+
+}
+.card .artist-name{
+    padding: 0 10px 10px 10px;
+}
+#card1 img {
+    border-radius: 50%;
+}
+
+.nav {
+    padding: 17px;
+}
+
+.navartist {
+    display: flex;
+    justify-content: space-between;
+    padding: 5px 9px;
+}
+
+h3 {
+    white-space: nowrap;     
+    overflow: hidden; 
+    text-overflow: ellipsis; 
+    width: 200px;
+    /* padding-top: 6px; */
+    font-size: 16px;
+    font-weight: 400;
+}
+h2{
+    font-size: 24px;
+}
+.card p{
+    width: 200px;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-size: 14px;
+    padding-top: 4px;
+}
+p {
+    color: rgb(198, 191, 191);
+}
+
+.signup {
+    padding: 13px;
+    border: none;
+    font-size: 16px;
+    font-weight: bold;
+    margin: 5px;
+}
+
+.signup a {
+    color: rgb(151, 146, 146);
+}
+
+.login {
+    padding: 13px 26px;
+    border-radius: 25px;
+    font-size: 16px;
+    font-weight: 600;
+    border: none;
+    margin: 0 10px;
+
+}
+
+.login a {
+    color: rgb(48, 45, 45);
+}
+
+.footer-right {
+    padding: 40px;
+    width: 1072px;
+}
+
+.footer-right ul {
+    gap: 10px;
+    font-size: 16px;
+}
+
+.footer-right ul p {
+    font-weight: 700;
+    font-size: 16px;
+    color: white;
+}
+
+.footer-right a {
+    color: rgb(157, 157, 157);
+}
+
+.logo2 {
+    background-color: rgb(50, 47, 47);
+    height: 19px;
+    width: 19px;
+    border-radius: 25px;
+    padding: 9px;
+
+}
+hr{
+    width: 1072px;
+    margin-left:37px;
+}
+.section {
+    padding: 40px;
+    color: rgb(157, 157, 157);
+    font-size: 14px;
+    font-weight: 500;
+    width: 1072px;
+}
+
+.photo {
+    position: relative;
+}
+
+.play {
+    padding: 12px;
+    background-color: #61db61;
+    border-radius: 25px;
+    height: 24px;
+    width: 24px;
+    bottom: 8px;
+    right: 18px;
+    position: absolute;
+    opacity: 0;
+}
+
+

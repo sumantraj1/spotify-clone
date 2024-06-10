@@ -1,0 +1,76 @@
+#home ul li a:hover {
+    color: white;
+    text-decoration: underline;
+
+}
+.card:hover .play {
+    transform: translateY(-12px);
+    opacity: 1;
+    transition: ease-in-out 0.3s;
+
+}
+.card:hover{
+    background-color:#1c1c1c; 
+    border-radius: 7px;
+    cursor: pointer;
+}
+.play:hover {
+    padding: 12.5px;
+    height: 25.5px;
+    width: 25.5px;
+
+}
+.playlist:hover{
+    cursor: pointer;
+    color: white;
+}
+
+.heading img:hover{
+    cursor: pointer;
+    filter: invert(1);
+}
+
+.btn:hover {
+    transform: scale(1.04);
+    cursor: pointer;
+}
+
+.english:hover {
+    border: 1px solid white;
+}
+
+.signup:hover {
+    cursor: pointer;
+    transform: scale(1.04);
+}
+
+.signup a:hover{
+    color: white;
+}
+
+.login:hover {
+    font-weight: 700;
+    cursor: pointer;
+    transform: scale(1.04);
+
+}
+
+.login a {
+    color: black;
+}
+
+.nav:hover{
+    cursor: not-allowed;
+}
+
+.navartist a:hover{
+    text-decoration: underline;
+}
+
+.footer-right ul a:hover{
+    color: white;
+    text-decoration: underline;
+}
+.logo2:hover{
+    background-color: rgb(94, 93, 93);
+}
