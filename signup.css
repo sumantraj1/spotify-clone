@@ -1,0 +1,137 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    display: flex;
+    background-color: #121212;
+    color: white;
+    font-family: "Helvetica Neue", helvetica, arial, "Hiragino Kaku Gothic ProN", "MS Gothic";
+    justify-content: center;
+
+}
+
+body a {
+    color: white;
+}
+.container{
+    width: 324px;
+}
+.box {
+    text-align: center;
+    margin: 20px 0;
+}
+
+.logo {
+    padding-top: 15px;
+}
+
+.logo img {
+    height: 40px;
+    filter: invert(1);
+}
+
+h1 {
+    padding: 10px 0;
+    font-size: 42px;
+    font-weight: 700;
+}
+
+.box1 {
+    padding: 10px 0;
+    margin-bottom: 15px;
+}
+.email label{
+    padding: 5px 0;
+    font-size: 14px;
+}
+.box1 a{
+    font-size: 14px;
+}
+.no {
+    padding: 5px 0;
+    color: #1ed751;
+    text-decoration: underline;
+}
+
+.email input{
+    background: transparent;
+    padding: 15px;
+    margin: 10px 0;
+    width: 292px;
+    border: 1px solid grey;
+    outline: 1px solid grey;
+    border-radius: 5px;
+    color: white;
+    font-size: 16px;
+}
+.email input:active{
+    border:1px solid white;
+}
+.email input:hover{
+    border: 1px solid white;
+}
+
+input::placeholder {
+    font-size: 16px;
+}
+
+.btn-next {
+    background-color: #1ed751;
+    width: 324px;
+    border-radius: 25px;
+    padding: 15px;
+    margin: 15px 0;
+    font-size: 16px;
+    font-weight: 700;
+    border: 1px solid #1ed751;
+}
+
+.box2 {
+    padding: 10px 0;
+    margin: 15px 0;
+}
+
+.btn-signup {
+    background: transparent;
+    color: white;
+    align-items: center;
+    display: flex;
+    border-radius: 30px;
+    margin: 6px 0;
+    padding:10px 20px;
+    gap: 40px;
+    font-size: 16px;
+    font-weight: 700;
+    border: 1px solid grey;
+    width: 324px;
+}
+.g{
+    gap: 50px;
+}
+.btn-signup:hover{
+    border: 1px solid white;
+}
+
+.box3 {
+    text-align: center;
+    padding: 12px 0;
+    margin-top: 10px;
+}
+
+.box3 h3 {
+    color: grey;
+    font-size: 16px;
+    padding: 10px 0;
+}
+
+.box3 p {
+    color: grey;
+    font-size: 12px;
+    padding: 10px 0;
+}
+
+hr{
+    border: 1px solid rgb(75, 72, 72);
+}
