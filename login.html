@@ -5,9 +5,212 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Log in</title>
-    <link rel="stylesheet" href="login.css">
 </head>
+<style>
+    * {
+    margin: 0;
+    padding: 0;
+}
 
+body {
+    display: grid;
+    background: linear-gradient(#2b2b2b,#191919,#060606);
+    color: white;
+    font-family: "Helvetica Neue", helvetica, arial, "Hiragino Kaku Gothic ProN", "MS Gothic";
+    justify-content: center;
+
+}
+
+body a {
+    color: white;
+}
+
+.container {
+    width: 734px;
+    margin: 30px;
+    background-color: #121212;
+    border-radius: 7px;
+}
+
+.box {
+    text-align: center;
+    margin: 20px 0;
+}
+
+.logo {
+    padding-top: 15px;
+}
+
+.logo img {
+    height: 35px;
+    filter: invert(1);
+}
+
+h1 {
+    padding-top: 20px;
+    font-size: 33px;
+    font-weight: 700;
+}
+
+.box1 {
+    display: flex;
+    flex-direction: column;
+    padding: 10px 0;
+    margin: 15px 0;
+    align-items: center;
+}
+
+.btn-signup {
+    background: transparent;
+    color: white;
+    display: flex;
+    align-items: center;
+    border-radius: 30px;
+    margin: 6px 0;
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: 700;
+    border: 1px solid grey;
+    width: 324px;
+}
+span{
+    margin: auto;
+}
+
+.btn-signup:hover {
+    border: 1px solid white;
+}
+
+.box2 {
+    padding: 20px 0;
+    margin-bottom: 15px;
+    display: flex;
+    justify-content: center;
+}
+
+.email {
+    display: flex;
+    flex-direction: column;
+}
+
+.email label {
+    margin-top: 14px;
+    font-size: 14px;
+}
+
+.email input {
+    background: transparent;
+    padding: 15px;
+    margin: 10px 0;
+    width: 292px;
+    border: 1px solid grey;
+    outline: 1px solid grey;
+    border-radius: 5px;
+    color: white;
+    font-size: 16px;
+}
+
+.email input:active {
+    border: 1px solid white;
+}
+
+.email input:hover {
+    border: 1px solid white;
+}
+
+input::placeholder {
+    font-size: 16px;
+}
+
+.rem {
+    display: flex;
+    gap: 10px;
+    padding: 5px 0;
+    align-items: center;
+    font-size: 14px;
+}
+
+.on {
+    width: 33px;
+    height: 17px;
+    border-radius: 25px;
+    background-color: #1ed751;
+    border: 3px solid black;
+    display: flex;
+    align-items: center;
+    justify-content: right;
+    
+}
+
+.on.active {
+    outline: 3px solid white;
+    justify-content: left;
+    background-color: grey;
+}
+
+.off {
+    width: 13px;
+    height: 13px;
+    background-color: #121212;
+    border-radius: 50px;
+    margin-right: 2px;
+    margin-left: 2px;
+}
+
+.btn-log {
+    background-color: #1ed751;
+    width: 324px;
+    border-radius: 25px;
+    padding: 15px;
+    margin: 20px 0;
+    font-size: 16px;
+    font-weight: 700;
+    border: 1px solid #1ed751;
+}
+
+.btn-log:hover {
+    transform: scale(1.05);
+}
+
+.forgot {
+    text-align: center;
+    /* margin: 0px 0; */
+}
+
+.forgot p {
+    margin: 20px 0;
+
+}
+.ss{
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+}
+.ac {
+    
+    color: rgb(162, 159, 159);
+}
+
+.box2 a:hover {
+    color: #1ed751;
+}
+
+.box3 {
+    text-align: center;
+    padding: 12px 0;
+    margin-top: 10px;
+}
+
+.box3 p {
+    color: grey;
+    font-size: 12px;
+    padding: 10px 0;
+}
+hr{
+    margin:0 80px;
+    border: 1px solid rgb(75, 72, 72);
+}
+</style>
 <body>
     <div class="container">
 
@@ -19,10 +222,10 @@
         </div>
 
         <div class="box1">
-            <button class="btn-signup g"><img src="assests/google.svg" alt="">Continue with Google</button>
-            <button class="btn-signup"><img src="assests/fbc.svg" alt="">Continue with Facebook</button>
-            <button class="btn-signup g"><img src="assests/apple.svg" alt="">Continue with Apple</button>
-            <button class="btn-signup n">Continue with phone number</button>
+            <button class="btn-signup"><img src="assests/google.svg" alt=""><span>Continue with Google</span></button>
+            <button class="btn-signup"><img src="assests/fbc.svg" alt=""><span>Continue with Facebook</span></button>
+            <button class="btn-signup"><img src="assests/apple.svg" alt=""><span>Continue with Apple</span></button>
+            <button class="btn-signup"><span>Continue with phone number</span></button>
         </div>
         <hr>
         <div class="box2">
@@ -32,7 +235,7 @@
                 <label for="pass">Password</label>
                 <input type="password" id="pass" name="pass" placeholder="Password">
                 <div class="rem">
-                    <div class="on">
+                    <div id="on" class="on">
                         <div class="off"></div>
                     </div>
                     <p>Remember me</p>
@@ -59,5 +262,12 @@
             </p>
         </div>
 </body>
-
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+        const on = document.getElementById('on');
+        document.addEventListener('click', () => {
+        on.classList.toggle('active');
+    });
+    });
+</script>
 </html>

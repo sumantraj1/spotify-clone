@@ -1,0 +1,659 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pritam</title>
+    <link rel="stylesheet" href="page.css">
+    <link rel="stylesheet" href="utility.css">
+    <link rel="stylesheet" href="hover.css">
+</head>
+<style>
+    .header {
+        background-color: #7e6842;
+    }
+
+    .buttons {
+        gap: 10px;
+        margin: 20px;
+    }
+
+    .premium {
+        border-radius: 25px;
+        color: black;
+        padding: 7px 13px;
+        font-size: 14px;
+        margin: 0;
+        border-radius: 25px;
+        font-weight: 600;
+        border: none;
+    }
+
+    .install {
+        padding: 7px 13px;
+        font-size: 14px;
+        margin: 0;
+        background-color: #372d1c;
+        color: white;
+        gap: 4px;
+        border-radius: 25px;
+        font-weight: 600;
+        border: none;
+
+    }
+
+    .notif {
+        padding: 8px;
+        background-color: #372d1c;
+        border-radius: 50px;
+        display: flex;
+    }
+
+    .notif img,
+    .profile img {
+        height: 15px;
+    }
+
+    .profile {
+        padding: 6px;
+        border-radius: 50px;
+        background-color: rgb(64, 188, 237);
+        display: flex;
+        outline: 3px solid #372d1c;
+    }
+
+    .premium:hover,
+    .install:hover,
+    .notif:hover,
+    .profile:hover {
+        transform: scale(1.04);
+    }
+
+    .album {
+        padding: 20px;
+        gap: 20px;
+        background: linear-gradient(#7e6842, #433722);
+        align-items: end;
+    }
+
+    .album img {
+        height: 180px;
+        border-radius: 5px;
+    }
+
+    .album h1 {
+        font-size: 65px;
+        font-weight: 900;
+    }
+
+    .album h4 {
+        font-size: 14px;
+        margin-top: 7px;
+    }
+
+    .album p {
+        font-size: 14px;
+    }
+
+    .album-2 {
+        background: linear-gradient(#32291a, #221e16, #121212);
+        padding: 15px 30px;
+    }
+
+    .title {
+        padding: 15px;
+        margin-top: 20px;
+    }
+
+    .songs {
+        top: 10px;
+        position: relative;
+        padding: 8px 10px;
+        gap: 10px;
+        align-items: center;
+        border-radius: 5px;
+    }
+
+    .songs:hover {
+        background-color: rgb(52, 51, 51);
+    }
+
+    .songs img {
+        height: 50px;
+        border-radius: 5px;
+        margin-left: 10px;
+    }
+
+    .par h3 {
+        width: auto;
+    }
+
+    .par p {
+        margin-top: 3px;
+        font-size: 14px;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        width: 250px;
+    }
+
+    #musicControls {
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        background-color: #000000;
+        color: white;
+        text-align: center;
+        padding: 10px;
+        display: none;
+    }
+
+    .icon {
+        display: inline-block;
+        margin: 0 5px;
+        cursor: pointer;
+    }
+
+    #progressBarContainer {
+        width: 40%;
+        margin: 2px;
+        background-color: white;
+        border-radius: 5px;
+        display: flex;
+        align-items: center;
+        padding: 2px;
+        cursor: pointer;
+        position: relative;
+    }
+
+    #progressBar {
+        height: 100%;
+        background-color: rgb(3, 180, 3);
+        border-radius: 5px 0 0 5px;
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+
+    #currentTimeDisplay {
+        color: white;
+        margin: 5px;
+    }
+
+    #totalDurationDisplay {
+        color: white;
+        margin: 5px;
+    }
+
+    #musicControls img {
+        height: 20px;
+        filter: invert(1);
+    }
+
+    #playPause {
+        padding: 4px;
+        background-color: white;
+        height: 22px;
+        border-radius: 25px;
+        width: 22px;
+    }
+
+    #playPause img {
+        filter: invert(0);
+    }
+
+    .pline {
+        gap: 2px;
+        margin: 0px 40px;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .music-left {
+        position: absolute;
+        left: 10px;
+    }
+
+    .music-left img {
+        margin: 0 5px;
+        border-radius: 3px;
+    }
+
+    .music-info {
+        margin-left: 10px;
+        text-align: left;
+        padding: 16px 0;
+    }
+
+    .music-info h3 {
+        font-size: 14px;
+        margin: 2px 0;
+    }
+
+    .music-info p {
+        font-size: 12px;
+        margin: 2px 0;
+    }
+</style>
+
+<body class="scrollbar">
+    <div class="spacer"></div>
+    <div id="container" class="flex bg-black">
+        <div id="left">
+            <div id="home" class="bg-grey rounded margin">
+                <div class="logo"><img class="invert" src="assests/logo.svg" alt=""></div>
+                <ul>
+                    <a href="index.html">
+                        <li class="flex items-center"><img class="invert" src="assests/home.svg" alt="home">Home</li>
+                    </a>
+                    <a href="search.html">
+                        <li class="flex items-center"><img class="invert" src="assests/search.svg" alt="search">Search
+                        </li>
+                    </a>
+                </ul>
+            </div>
+
+            <div class="library bg-grey rounded margin padding">
+                <div class="heading space-between">
+                    <div title="Collapse Your library" class="playlist flex gap">
+                        <img class="invert icons" src="assests/playlist.svg" alt="">
+                        <h4>Your Library</h4>
+                    </div>
+                    <div>
+                        <img title="Create playlist or folder" class="plus invert iconsplus" src="assests/plus.svg"
+                            alt="">
+                    </div>
+                </div>
+
+
+                <div class="scroll">
+                    <div class="lib2 bg-lgrey rounded">
+                        <div>
+                            <p class="para">Create your first playlist</p>
+                            <p class="para1">It's easy, we'll help you</p>
+                        </div>
+                        <button class="btn">create playlist</button>
+                    </div>
+
+                    <div class="lib2 bg-lgrey rounded">
+                        <div>
+                            <p class="para">Lets find some podcasts to follow</p>
+                            <p class="para1">we'll keep you updated on new episodes</p>
+                        </div>
+
+                        <button class="btn"><a href="podcastpage.html">Browse
+                                podcasts</a></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="right">
+            <div class="header">
+                <div class="nav">
+                    <a href="index.html"><img src="assests/navleft.svg" alt=""></a>
+                    <img src="assests/navright.svg" alt="">
+                </div>
+                <div class="buttons flex items-center">
+                    <button class="premium">Explore Premium</button>
+                    <button class="install flex  items-center"><img class="iconsplus invert"
+                            src="assests/install.svg">Install App</button>
+                    <div class="notif"><img class="iconsplus invert" src="assests/notfic.svg" alt=""></div>
+                    <div class="profile">
+                        <img class="iconsplus" src="assests/profile.svg" alt="">
+                    </div>
+                </div>
+            </div>
+
+            <div id="homes" class="flex column">
+                <div class="album flex">
+                    <div><img src="	https://thisis-images.spotifycdn.com/37i9dQZF1DZ06evO0QBBOU-default.jpg" alt="">
+                    </div>
+                    <div class="a2">
+                        <h4>Playlist</h4>
+                        <h1>This is Pritam</h1>
+                        <p>This is Pritam. The essential tracks, all in one playlist.</p>
+                        <h4>🎧 Indian Playlists . 105,992 likes . 60 songs, about 4 hr 30 min</h4>
+                    </div>
+                </div>
+
+
+                <div class="album-2 scrollbar">
+                    <div class="title">
+                        <p># Title</p>
+                    </div>
+
+                    <hr>
+                    <div id="btn1" class="songs flex">
+                        <p>1</p>
+                        <img src="https://i.scdn.co/image/ab67616d00004851fdd4cc7defb987b4c3aa2d9e" alt="">
+                        <div class="par">
+                            <h3>Tere Pyaar Mein</h3>
+                            <p>Pritam, Arijit Singh, Amitabh Bhattacharya, Nikhita Gandhi</p>
+                        </div>
+                    </div>
+                    <div id="btn2" class="songs flex">
+                        <p>2</p>
+                        <img src="https://i.scdn.co/image/ab67616d000048511a2e85cf59d754808254425f" alt="">
+                        <div class="par">
+                            <h3>Lutt Putt Gaya</h3>
+                            <p>Pritam, Arijit Singh, IP Singh, Swanand Kirkire</p>
+                        </div>
+                    </div>
+                    <div id="btn3" class="songs flex">
+                        <p>3</p>
+                        <img src="https://i.scdn.co/image/ab67616d00004851c08202c50371e234d20caf62" alt="">
+                        <div class="par">
+                            <h3>Kesariya (from "Brahmastra")</h3>
+                            <p>Pritam, Arijit Singh, Amitabh Bhattacharya</p>
+                        </div>
+                    </div>
+
+                    <div id="btn4" class="songs flex">
+                        <p>4</p>
+                        <img src="https://i.scdn.co/image/ab67616d000048517506d87e6489c5a93c042523" alt="">
+                        <div class="par">
+                            <h3>O Maahi (From "Dunki")</h3>
+                            <p>Pritam,Arijit Singh, Irshad Kamil</p>
+                        </div>
+                    </div>
+                    <div id="btn5" class="songs flex">
+                        <p>5</p>
+                        <img src="https://i.scdn.co/image/ab67616d00004851eaa6b4bfb5954ee5a5a8ce9e" alt="">
+                        <div class="par">
+                            <h3>Khairiyat</h3>
+                            <p>Pritam, Arijit Singh</p>
+                        </div>
+                    </div>
+                </div>
+                <audio id="audio1" src="songs/song6.mp3"></audio>
+                <audio id="audio2" src="songs/song7.mp3"></audio>
+                <audio id="audio3" src="songs/song8.mp3"></audio>
+                <audio id="audio4" src="songs/song4.mp3"></audio>
+                <audio id="audio5" src="songs/song9.mp3"></audio>
+            </div>
+
+            <div class="footer-right bg-grey">
+                <div class="flex space-between">
+                    <div>
+                        <ul class="flex column" role="list">
+                            <p>Company</p>
+                            <a href="https://www.spotify.com/in-en/about-us/contact/" role="link">
+                                <span>About</span>
+                            </a>
+                            <a href="https://www.lifeatspotify.com/" role="link">
+                                <span>Jobs</span>
+                            </a>
+                            <a href="https://newsroom.spotify.com/" role="link">
+                                <span>For the Record</span>
+                            </a>
+                        </ul>
+                    </div>
+                    <div>
+                        <ul class="flex column" role="list">
+                            <p>Communities</p>
+                            <a href="https://artists.spotify.com/" role="link">
+                                <span>For Artists</span>
+                            </a>
+                            <a href="https://developer.spotify.com/" role="link">
+                                <span>Developers</span>
+                            </a>
+                            <a href="https://ads.spotify.com/" role="link">
+                                <span>Advertising</span>
+                            </a>
+                            <a href="https://investors.spotify.com/" role="link">
+                                <span>Investors</span>
+                            </a>
+                            <a href="https://spotifyforvendors.com/" role="link">
+                                <span>Vendors</span>
+                            </a>
+                        </ul>
+                    </div>
+                    <div>
+                        <ul class="flex column" role="list">
+                            <p>Useful links</p>
+                            <a href="https://support.spotify.com/" role="link">
+                                <span>Support</span>
+                            </a>
+                            <a href="https://www.spotify.com/in-en/free/" role="link">
+                                <span>Free Mobile App</span>
+                            </a>
+                        </ul>
+                    </div>
+                    <div>
+                        <ul class="flex column" role="list">
+                            <p>Spotify Plans</p>
+                            <a href="https://www.spotify.com/in-en/premium" role="link">
+                                <span>Premium Individual</span>
+                            </a>
+                            <a href="https://www.spotify.com/in-en/duo" role="link">
+                                <span>Premium Duo</span>
+                            </a>
+                            <a href="https://www.spotify.com/in-en/family" role="link">
+                                <span>Premium Family</span>
+                            </a>
+                            <a href="https://www.spotify.com/in-en/student" role="link">
+                                <span>Premium Student</span>
+                            </a>
+                            <a href="https://www.spotify.com/in-en/free" role="link">
+                                <span>Spotify Free</span>
+                            </a>
+                        </ul>
+                    </div>
+                    <div class="flex gap">
+                        <div class="logo2">
+                            <a href="https://instagram.com/spotify" aria-label="Instagram" title="Instagram"
+                                target="_blank" rel="noopener noreferrer">
+                                <div><img class="filter  iconsplus" src="assests/insta.svg" alt=""></div>
+                            </a>
+                        </div>
+
+                        <div class="logo2">
+                            <a href="https://twitter.com/spotify" aria-label="Twitter" title="Twitter" target="_blank"
+                                rel="noopener noreferrer">
+                                <div> <img class="filter iconsplus" src="assests/twit.svg" alt=""></div>
+                            </a>
+                        </div>
+
+                        <div class="logo2">
+                            <a href="https://facebook.com/spotify" aria-label="Facebook" title="Facebook"
+                                target="_blank" rel="noopener noreferrer">
+                                <div> <img class="filter iconsplus" src="assests/fb.svg" alt=""></div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <hr>
+            <div class="section bg-grey">
+                <span> &#169 2024 Spotify AB</span>
+            </div>
+
+            <div id="musicControls">
+                <div class="music-left flex">
+                    <img id="currentSongImage" src="" style="height: 60px;  filter:invert(0);">
+                    <div class="music-info">
+                        <h3 id="currentSongTitle"></h3>
+                        <p id="currentSongArtist"></p>
+                    </div>
+                </div>
+                <div class="music-right">
+                    <div id="prev" class="icon"><img src="assests/previous.svg" alt="Previous"></div>
+                    <div id="playPause" class="icon"><img src="assests/play.svg" alt="Play"></div>
+                    <div id="next" class="icon"><img src="assests/next.svg" alt="Next"></div>
+
+                    <div class="pline flex">
+                        <div id="currentTimeDisplay">0:00</div>
+                        <div id="progressBarContainer">
+                            <div id="progressBar"></div>
+                        </div>
+                        <div id="totalDurationDisplay">0:00</div>
+                    </div>
+                </div>
+
+            </div>
+
+
+        </div>
+    </div>
+</body>
+<script>
+    let currentAudio = null;
+    const audios = [
+        document.getElementById('audio1'),
+        document.getElementById('audio2'),
+        document.getElementById('audio3'),
+        document.getElementById('audio4'),
+        document.getElementById('audio5')
+    ];
+    let currentIndex = -1;
+
+    function formatTime(seconds) {
+        const minutes = Math.floor(seconds / 60);
+        const secs = Math.floor(seconds % 60);
+        return `${minutes}:${secs < 10 ? '0' : ''}${secs}`;
+    }
+
+    function updateProgressBar() {
+        const progressBar = document.getElementById('progressBar');
+        const currentTimeDisplay = document.getElementById('currentTimeDisplay');
+        const totalDurationDisplay = document.getElementById('totalDurationDisplay');
+        if (currentAudio) {
+            const percentage = (currentAudio.currentTime / currentAudio.duration) * 100;
+            progressBar.style.width = percentage + '%';
+            currentTimeDisplay.textContent = formatTime(currentAudio.currentTime);
+            totalDurationDisplay.textContent = formatTime(currentAudio.duration);
+        }
+    }
+
+    function toggleAudio(audio, index) {
+        const musicControls = document.getElementById('musicControls');
+        const playPauseButton = document.getElementById('playPause');
+        const currentSongImage = document.getElementById('currentSongImage');
+        const currentSongTitle = document.getElementById('currentSongTitle');
+        const currentSongArtist = document.getElementById('currentSongArtist');
+
+        if (currentAudio && currentAudio !== audio) {
+            currentAudio.pause();
+            currentAudio.currentTime = 0;
+        }
+        if (audio.paused) {
+            audio.play();
+            currentAudio = audio;
+            currentIndex = index;
+            musicControls.style.display = 'block';
+            playPauseButton.innerHTML = '<img src="assests/pause.svg" alt="Pause">';
+            updateProgressBar();
+
+            // Update the current song image
+            const songImage = document.querySelectorAll('.songs img')[index];
+            currentSongImage.src = songImage.src;
+
+            // Update song title and artist
+            const songTitle = document.querySelectorAll('.par h3')[index].textContent;
+            const songArtist = document.querySelectorAll('.par p')[index].textContent;
+            currentSongTitle.textContent = songTitle;
+            currentSongArtist.textContent = songArtist;
+
+        } else {
+            audio.pause();
+            currentAudio = null;
+            playPauseButton.innerHTML = '<img src="assests/play.svg" alt="Play">';
+        }
+    }
+
+    // Add the image update in all button click event listeners
+    document.getElementById('btn1').addEventListener('click', function () {
+        toggleAudio(audios[0], 0);
+    });
+
+    document.getElementById('btn2').addEventListener('click', function () {
+        toggleAudio(audios[1], 1);
+    });
+
+    document.getElementById('btn3').addEventListener('click', function () {
+        toggleAudio(audios[2], 2);
+    });
+
+    document.getElementById('btn4').addEventListener('click', function () {
+        toggleAudio(audios[3], 3);
+    });
+
+    document.getElementById('btn5').addEventListener('click', function () {
+        toggleAudio(audios[4], 4);
+    });
+
+
+    document.getElementById('playPause').addEventListener('click', function () {
+        if (currentAudio) {
+            if (currentAudio.paused) {
+                currentAudio.play();
+                this.innerHTML = '<img src="assests/pause.svg" alt="Pause">';
+            } else {
+                currentAudio.pause();
+                this.innerHTML = '<img src="assests/play.svg" alt="Play">';
+            }
+        }
+    });
+
+    document.getElementById('prev').addEventListener('click', function () {
+        if (currentIndex > 0) {
+            toggleAudio(audios[currentIndex - 1], currentIndex - 1);
+        }
+    });
+
+    document.getElementById('next').addEventListener('click', function () {
+        if (currentIndex < audios.length - 1) {
+            toggleAudio(audios[currentIndex + 1], currentIndex + 1);
+        }
+    });
+
+    setInterval(updateProgressBar, 500);
+
+    audios.forEach(audio => {
+        audio.addEventListener('ended', () => {
+            document.getElementById('playPause').innerHTML = '<img src="assests/play.svg" alt="Play">';
+            document.getElementById('progressBar').style.width = '0%';
+            document.getElementById('currentTimeDisplay').textContent = `0:00`;
+            document.getElementById('totalDurationDisplay').textContent = formatTime(audio.duration);
+        });
+        audio.addEventListener('loadedmetadata', () => {
+            document.getElementById('currentTimeDisplay').textContent = `0:00`;
+            document.getElementById('totalDurationDisplay').textContent = formatTime(audio.duration);
+        });
+    });
+
+    const progressBarContainer = document.getElementById('progressBarContainer');
+    progressBarContainer.addEventListener('click', function (e) {
+        const rect = this.getBoundingClientRect();
+        const offsetX = e.clientX - rect.left;
+        const totalWidth = rect.width;
+        const percentage = offsetX / totalWidth;
+        if (currentAudio) {
+            currentAudio.currentTime = percentage * currentAudio.duration;
+            updateProgressBar();
+        }
+    });
+
+    progressBarContainer.addEventListener('mousedown', function () {
+        progressBarContainer.addEventListener('mousemove', seek);
+    });
+
+    progressBarContainer.addEventListener('mouseup', function () {
+        progressBarContainer.removeEventListener('mousemove', seek);
+    });
+
+    function seek(e) {
+        const rect = progressBarContainer.getBoundingClientRect();
+        const offsetX = e.clientX - rect.left;
+        const totalWidth = rect.width;
+        const percentage = offsetX / totalWidth;
+        if (currentAudio) {
+            currentAudio.currentTime = percentage * currentAudio.duration;
+            updateProgressBar();
+        }
+    }
+</script>
+
+</html>

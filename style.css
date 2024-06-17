@@ -149,20 +149,19 @@ h4 {
 }
 
 .boxes {
-    /* height: 315px; */
     padding: 30px 10px;
     width: 1132px;
-
 }
 
 .cardcontainer {
     display: flex;
     justify-content: space-between;
-    
+     
 }
 
 .card {
     width: 226px;
+
 
 }
 
@@ -298,5 +297,3 @@ hr{
     position: absolute;
     opacity: 0;
 }
-
-

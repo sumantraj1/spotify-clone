@@ -33,7 +33,7 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 
-// Toggle the active class on the search bar when button2 is clicked
+// Toggle the active class on the search bar when search icon is clicked
     searchIcon.addEventListener('click', () => {
         const toggleTimes = 4; // Number of times to toggle
         let currentTime = 0;
@@ -97,13 +97,7 @@ document.addEventListener('DOMContentLoaded', () => {
             alert('No results found.');
         }
 
-        // Add event listener to search bar for Enter key
-        // document.getElementById('search-input').addEventListener('keydown', function(event) {
-        //     if (event.key === 'Enter') {
-        //         performSearch();
-        //     }
-        // });
-
+ // Add  to search bar for Enter key
         function handleKeyPress(event) {
             if (event.key === 'Enter') {
                 performSearch();
