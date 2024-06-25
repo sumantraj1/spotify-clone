@@ -199,9 +199,61 @@ h4 {
     color: white;
 }
 
+.header-2 {
+    justify-content: space-between;
+    height: 50px;
+    position: sticky;
+    top: 0;
+    z-index: 1;
+    align-items: center;
+    padding-right: 10px;
+    display: none;
+}
+
+.overlay {
+    height: 0%;
+    width: 100%;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.9);
+    overflow-y: hidden;
+    transition: 0.5s;
+}
+
+.overlay-content {
+    position: relative;
+    top: 10%;
+    width: 100%;
+    text-align: left;
+}
+
+.overlay a {
+    padding: 12px 20px;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 700;
+    color: white;
+    display: block;
+    transition: 0.3s;
+}
+
+.overlay a:hover,
+.overlay a:focus {
+    color: #8b8787;
+}
+
+.overlay .closebtn {
+    position: absolute;
+    right: 0px;
+    font-size: 40px;
+}
 .nav {
     padding: 17px;
 }
+
+
 
 .boxes-podcast .navartist{
     padding: 10px 0px;
@@ -244,6 +296,12 @@ p {
 
 .footer-right {
     padding: 40px;
+}
+.foot{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content:space-between ;
+    gap: 10px;
 }
 
 .footer-right ul {
@@ -320,6 +378,76 @@ hr {
     left: 166px;
     top: 42px;
 }
+@media only screen and (max-width: 1024px)
+{
+    .search-bar {
+        width: 240px;
+        margin-left: 10px;
+    }
+    
+}
+@media only screen and (max-width: 768px){
+    .cardcontainer-podcast {
+        gap: 15px;
+    }
+    .boxes-podcast{
+        padding: 20px 12px;
+    }
+    .card-podcast {
+        width: 200px;
+        height: 100px;
+    }
+
+    .card-podcast h2 {
+        padding: 10px 8px;
+        width: 130px;
+        font-size: 14px;
+    }
+    
+    .card-podcast img {
+        height: 70px;
+        width: 70px;
+        left: 139px;
+        top: 33px;
+    }
+}
+
+@media only screen and (max-width: 435px){
+    .search-bar {
+        border-radius: 4px;
+        background-color: white;
+        /* width: auto; */
+
+    }
+    .search-input {
+        padding: 5px;
+        font-size: 14px;
+        color: black;
+    }
+    .icon img{
+        filter: invert(0);
+    }
+    .clear-icon svg {
+        color: black;
+    }
+    .card-podcast {
+        width: 190px;
+        height: 105px;
+    }
+
+    .card-podcast h2 {
+        width: 130px;
+    }
+    
+    .card-podcast img {
+        height: 90px;
+        width: 90px;
+        left: 115px;
+        top: 24px;
+    }
+    
+}
+
 
 .c1 {
     background-color: #0d73ec;

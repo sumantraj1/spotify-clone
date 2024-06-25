@@ -8,10 +8,14 @@
     <link rel="stylesheet" href="page.css">
     <link rel="stylesheet" href="utility.css">
     <link rel="stylesheet" href="hover.css">
+    <link rel="stylesheet" href="phone.css">
 </head>
 <style>
     .header {
-        background-color: #0c1a61;
+        background-color: #7e6842;
+    }
+    .header-2 {
+        background-color: #7e6842;
     }
 
     .buttons {
@@ -34,7 +38,7 @@
         padding: 7px 13px;
         font-size: 14px;
         margin: 0;
-        background-color: #050b2d;
+        background-color: #372d1c;
         color: white;
         gap: 4px;
         border-radius: 25px;
@@ -45,7 +49,7 @@
 
     .notif {
         padding: 8px;
-        background-color: #050b2d;
+        background-color: #372d1c;
         border-radius: 50px;
         display: flex;
     }
@@ -60,7 +64,7 @@
         border-radius: 50px;
         background-color: rgb(64, 188, 237);
         display: flex;
-        outline: 3px solid #050b2d;
+        outline: 3px solid #372d1c;
     }
 
     .premium:hover,
@@ -73,7 +77,7 @@
     .album {
         padding: 20px;
         gap: 20px;
-        background: linear-gradient(#0c1a61, #08113e);
+        background: linear-gradient(#7e6842, #433722);
         align-items: end;
     }
 
@@ -83,7 +87,7 @@
     }
 
     .album h1 {
-        font-size: 65px;
+        font-size: 50px;
         font-weight: 900;
     }
 
@@ -97,7 +101,7 @@
     }
 
     .album-2 {
-        background: linear-gradient(#090d22, #0e101a, #121212);
+        background: linear-gradient(#32291a, #221e16, #121212);
         padding: 15px 30px;
     }
 
@@ -120,7 +124,7 @@
     }
 
     .songs img {
-        height: 50px;
+        height: 55px;
         border-radius: 5px;
         margin-left: 10px;
     }
@@ -145,9 +149,9 @@
         width: 100%;
         background-color: #000000;
         color: white;
-        text-align: center;
         padding: 10px;
         display: none;
+
     }
 
     .icon {
@@ -166,6 +170,7 @@
         padding: 2px;
         cursor: pointer;
         position: relative;
+        right: 0;
     }
 
     #progressBar {
@@ -187,7 +192,7 @@
         margin: 5px;
     }
 
-    #musicControls img {
+    .icon img {
         height: 20px;
         filter: invert(1);
     }
@@ -196,7 +201,7 @@
         padding: 4px;
         background-color: white;
         height: 22px;
-        border-radius: 25px;
+        border-radius: 50%;
         width: 22px;
     }
 
@@ -216,9 +221,16 @@
         left: 10px;
     }
 
+    .music-right {
+        text-align: center;
+        right: 0;
+    }
+
     .music-left img {
         margin: 0 5px;
         border-radius: 3px;
+        height: 55px;
+        filter: invert(0);
     }
 
     .music-info {
@@ -235,6 +247,79 @@
     .music-info p {
         font-size: 12px;
         margin: 2px 0;
+    }
+
+    @media only screen and (max-width: 1045px) {
+        .album h1 {
+            font-size: 30px;
+            font-weight: 900;
+        }
+
+        .album h4 {
+            text-wrap: wrap;
+        }
+
+        .music-info {
+            display: none;
+        }
+    }
+
+    @media only screen and (max-width: 768px) {
+        .album h1 {
+            font-size: 20px;
+            font-weight: 800;
+        }
+
+        .album h4 {
+            font-size: 13px;
+        }
+
+        .album p {
+            font-size: 13px;
+
+        }
+
+        .album img {
+            height: 155px;
+        }
+
+    }
+
+    @media only screen and (max-width: 450px) {
+        .album h1 {
+            font-size: 15px;
+
+        }
+
+        .album img {
+            height: 130px;
+        }
+
+        .album h4 {
+            font-size: 12px;
+        }
+
+        .album p {
+            font-size: 12px;
+
+        }
+
+        .par h3 {
+            font-size: 14px;
+        }
+
+        .par p {
+            font-size: 13px;
+            width: 200px;
+        }
+
+        .music-left img {
+            height: 50px;
+        }
+
+        .album-2 {
+            padding: 10px 15px;
+        }
     }
 </style>
 
@@ -305,6 +390,28 @@
                     </div>
                 </div>
             </div>
+            <div class="header-2 navcolor">
+                <div class="nav flex">
+                    <div><a href="index.html"><img src="assests/navleft.svg" alt=""></a></div>
+                    <div><img src="assests/navright.svg" alt=""></div>
+                    <div class="phlogo"><img class="invert" src="assests/logo.svg" alt=""></div>
+                </div>
+
+                <div class="flex items-center gapm">
+                    <a href="search.html"><img class="invert iconsm" src="assests/search.svg" alt=""></a>
+                    <div style="font-size:25px;" onclick="openNav()">&#9776;</div>
+                </div>
+
+                <div id="myNav" class="overlay">
+                    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+                    <div class="overlay-content">
+                        <a href="signup.html">SignUp</a>
+                        <a href="login.html">LogIn</a>
+                        <a href="#">Explore Premium</a>
+                        <a href="podcastpage.html">Browse Podcasts</a>
+                    </div>
+                </div>
+            </div>
 
             <div id="homes" class="flex column">
                 <div class="album flex">
@@ -319,7 +426,7 @@
                 </div>
 
 
-                <div class="album-2 scrollbar">
+                <div class="album-2">
                     <div class="title">
                         <p># Title</p>
                     </div>
@@ -354,8 +461,8 @@
                         <p>4</p>
                         <img src="https://i.scdn.co/image/ab67616d000048517506d87e6489c5a93c042523" alt="">
                         <div class="par">
-                            <h3>Oo Maahi (From "Dunki")</h3>
-                            <p>Pritam,Arijit Singh, Irshad Kamil</p>
+                            <h3>O Maahi (From "Dunki")</h3>
+                            <p>Pritam, Arijit Singh, Irshad Kamil</p>
                         </div>
                     </div>
                     <div id="btn5" class="songs flex">
@@ -375,7 +482,7 @@
             </div>
 
             <div class="footer-right bg-grey">
-                <div class="flex space-between">
+                <div class="foot">
                     <div>
                         <ul class="flex column" role="list">
                             <p>Company</p>
@@ -472,16 +579,16 @@
 
             <div id="musicControls">
                 <div class="music-left flex">
-                    <img id="currentSongImage" src="" style="height: 60px;  filter:invert(0);">
+                    <img id="currentSongImage" src="">
                     <div class="music-info">
                         <h3 id="currentSongTitle"></h3>
                         <p id="currentSongArtist"></p>
                     </div>
                 </div>
                 <div class="music-right">
-                    <div id="prev" class="icon"><img src="assests/previous.svg" alt="Previous"></div>
-                    <div id="playPause" class="icon"><img src="assests/play.svg" alt="Play"></div>
-                    <div id="next" class="icon"><img src="assests/next.svg" alt="Next"></div>
+                        <div id="prev" class="icon"><img src="assests/previous.svg" alt="Previous"></div>
+                        <div id="playPause" class="icon"><img src="assests/play.svg" alt="Play"></div>
+                        <div id="next" class="icon"><img src="assests/next.svg" alt="Next"></div>
 
                     <div class="pline flex">
                         <div id="currentTimeDisplay">0:00</div>
@@ -499,6 +606,15 @@
     </div>
 </body>
 <script>
+    function openNav() {
+        document.getElementById("myNav").style.height = "100%";
+    }
+
+    function closeNav() {
+        document.getElementById("myNav").style.height = "0%";
+    }
+
+
     let currentAudio = null;
     const audios = [
         document.getElementById('audio1'),

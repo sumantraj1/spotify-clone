@@ -8,8 +8,20 @@
     <link rel="stylesheet" href="page.css">
     <link rel="stylesheet" href="utility.css">
     <link rel="stylesheet" href="hover.css">
+    <link rel="stylesheet" href="phone.css">
 </head>
-
+<script>
+    function openNav() {
+      document.getElementById("myNav").style.height = "100%";
+    }
+    
+    function closeNav() {
+      document.getElementById("myNav").style.height = "0%";
+    }
+    </script>
+<style>
+ 
+</style>
 <body class="scrollbar">
     <div class="spacer"></div>
     <div id="container" class="flex bg-black">
@@ -108,6 +120,29 @@
                             in</a></button>
                 </div>
             </div>
+            <div class="header-2 navcolor-dark">
+                <div class="nav flex">
+                    <div><a href="index.html#fc"><img src="assests/navleft.svg" alt=""></a></div>
+                    <div> <img src="assests/navright.svg" alt=""></div>
+                    <div class="phlogo"><img class="invert" src="assests/logo.svg" alt=""></div>
+                </div>
+
+                <div class="flex items-center gapm">
+                    <a href="search.html"><img class="invert iconsm" src="assests/search.svg" alt=""></a>
+
+                    <div style="font-size:25px;" onclick="openNav()">&#9776;</div>
+                </div>
+
+                <div id="myNav" class="overlay">
+                    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+                    <div class="overlay-content">
+                        <a href="signup.html">SignUp</a>
+                        <a href="login.html">LogIn</a>
+                        <a href="#">Explore Premium</a>
+                        <a href="podcastpage.html">Browse Podcasts</a>
+                    </div>
+                </div>
+            </div>
 
             <div id="homes" class="flex column">
                 <div class="boxes bg-grey">
@@ -194,7 +229,7 @@
 
 
             <div class="footer-right bg-grey">
-                <div class="flex space-between">
+                <div class="foot">
                     <div>
                         <ul class="flex column" role="list">
                             <p>Company</p>

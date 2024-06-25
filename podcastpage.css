@@ -150,27 +150,80 @@ h4 {
     border-radius: 10px 10px 0 0;
     /* opacity: .7; */
     background-color: #10352a;
+}
+.header-2 {
+    background-color: #10352a;
+    justify-content: space-between;
+    height: 50px;
+    position: sticky;
+    top: 0;
+    z-index: 1;
+    align-items: center;
+    padding-right: 10px;
+    display: none;
+}
+.phlogo{
+    margin-left: 15px;
+}
+.overlay {
+    height: 0%;
+    width: 100%;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.9);
+    overflow-y: hidden;
+    transition: 0.5s;
+}
 
+.overlay-content {
+    position: relative;
+    top: 10%;
+    width: 100%;
+    text-align: left;
+}
+
+.overlay a {
+    padding: 12px 20px;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 700;
+    color: white;
+    display: block;
+    transition: 0.3s;
+}
+
+.overlay a:hover,
+.overlay a:focus {
+    color: #8b8787;
+}
+
+.overlay .closebtn {
+    position: absolute;
+    right: 0px;
+    font-size: 40px;
 }
 
 .boxes {
-    /* height: 315px; */
     padding: 30px 10px;
-    /* width: 1132px; */
 
 }
 
 .cardcontainer {
     display: flex;
-    justify-content: flex-start;
-    flex-wrap: wrap;
+    /* justify-content: space-between; */
+     overflow: scroll;
 
+}
+.cardcontainer::-webkit-scrollbar {
+    display: none;
 }
 
 .card {
     width: 187px;
-
-
+    justify-content: center;
+    display: grid;
 }
 
 .card img:first-child {
@@ -257,6 +310,12 @@ p {
 .footer-right {
     padding: 40px;
 }
+.foot{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content:space-between ;
+    gap: 10px;
+}
 
 .footer-right ul {
     gap: 10px;
@@ -310,7 +369,6 @@ hr {
 }
 
 .podcast {
-    height: 185px;
     background: linear-gradient(#599383, #24715b, #1c5a49, #11382e);
 }
 
@@ -323,14 +381,14 @@ hr {
 
 
 .boxes-podcast{
-    padding: 30px 20px;
+    padding: 30px 15px;
 }
 .cardcontainer-podcast {
     display: flex;
     justify-content: flex-start;
     flex-wrap: wrap;
-    gap: 20px;
-
+    gap: 15px;
+    
 }
 
 .card-podcast {
@@ -358,6 +416,31 @@ hr {
     left: 166px;
     top: 42px;
 }
+
+@media only screen and (max-width: 480px){
+    .podcast h1{
+        font-size: 50px;
+    }
+    .card-podcast {
+        width: 190px;
+        height: 105px;
+    }
+    
+    .card-podcast h2 {
+        padding: 15px 10px;
+        width: 140px;
+        font-size: 14px;
+    }
+    
+    .card-podcast img {
+        height: 90px;
+        width: 90px;
+        left: 115px;
+        top: 31px;
+    
+    }
+}
+
 
 .c1 {
     background-color: #0d73ec;

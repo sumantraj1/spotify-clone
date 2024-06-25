@@ -1,0 +1,78 @@
+@media only screen and (max-width: 768px) {
+    #left{
+        display: none;
+    }
+    #right{
+     flex-grow: 1;
+     margin-left: 0;
+    }
+    .play{
+        display: none;
+    }
+    .header{
+        display: none;
+    }
+    .header-2{
+        display: flex;
+    }
+    .boxes {
+        padding: 20px 5px;
+    }
+    .card {
+        width: 180px;
+    }
+    
+    .card img:first-child {
+        width: 170px;
+        height: 170px;
+    }
+    #card1 img:first-child {
+        border-radius: 17px;
+    }
+    .navartist h2{
+        font-size: 21px;
+    }
+    .navartist p{
+        font-size: 15px;
+    }
+    h3 { 
+        width: 165px;
+        font-size: 16px;
+
+    }
+    .card p{
+        width: 165px;
+    }
+  }
+
+  @media only screen and (max-width: 435px){
+    .foot{
+        flex-direction: column;
+        gap: 15px;
+    }
+    .card {
+        width: 164px;
+    }
+    
+    .card img:first-child {
+        width: 155px;
+        height: 155px;
+    }
+    #card1 img:first-child {
+        border-radius: 17px;
+    }
+    .navartist h2{
+        font-size: 18px;
+    }
+    .navartist p{
+        font-size: 14px;
+    }
+    h3 { 
+        width: 150px;
+        font-size: 16px;
+
+    }
+    .card p{
+        width: 150px;
+    }
+  }

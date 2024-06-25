@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="utility.css">
     <link rel="stylesheet" href="hover.css">
-    <!-- <script src="script.js"></script> -->
+    <link rel="stylesheet" href="phone.css">
 </head>
 
 <body class="scrollbar">
@@ -112,6 +112,29 @@
                 </div>
             </div>
 
+            <div class="header-2 navcolor">
+                <div class="nav flex">
+                    <div><img src="assests/navleft.svg" alt=""></div>
+                    <div><img src="assests/navright.svg" alt=""></div>
+                    <div class="phlogo"><img class="invert" src="assests/logo.svg" alt=""></div>
+                </div>
+
+                <div class="flex items-center gapm">
+                    <a href="search.html"><img class="invert iconsm" src="assests/search.svg" alt=""></a>
+                    <div style="font-size:25px;" onclick="openNav()">&#9776;</div>
+                </div>
+
+                <div id="myNav" class="overlay">
+                    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+                    <div class="overlay-content">
+                        <a href="signup.html">SignUp</a>
+                        <a href="login.html">LogIn</a>
+                        <a href="#">Explore Premium</a>
+                        <a href="podcastpage.html">Browse Podcasts</a>
+                    </div>
+                </div>
+            </div>
+
             <div id="homes" class="flex column">
                 <div id="par" class="boxes bg-grd">
                     <div class="navartist">
@@ -123,8 +146,8 @@
                         </a>
                     </div>
 
-                    <a href="pritam.html">
-                        <div class="cardcontainer">
+                    <div class="cardcontainer">
+                        <a href="pritam.html">
                             <div class="card" id="card1">
                                 <div class="photo">
                                     <img src="https://i.scdn.co/image/ab67616100005174cb6926f44f620555ba444fca" alt="">
@@ -135,507 +158,515 @@
                                     <p>Artist</p>
                                 </div>
                             </div>
-                    </a>
+                        </a>
 
-                    <a href="arijitsingh.html">
+                        <a href="arijitsingh.html">
+                            <div class="card" id="card1">
+                                <div class="photo">
+                                    <img src="https://i.scdn.co/image/ab676161000051740261696c5df3be99da6ed3f3" alt="">
+                                    <img class="play" src="assests/play.svg">
+                                </div>
+                                <div class="artist-name">
+                                    <h3>Arijit Singh</h3>
+                                    <p>Artist</p>
+                                </div>
+                            </div>
+                        </a>
+
                         <div class="card" id="card1">
                             <div class="photo">
-                                <img src="https://i.scdn.co/image/ab676161000051740261696c5df3be99da6ed3f3" alt="">
+                                <img src="https://i.scdn.co/image/ab67616100005174b19af0ea736c6228d6eb539c" alt="">
                                 <img class="play" src="assests/play.svg">
                             </div>
                             <div class="artist-name">
-                                <h3>Arijit Singh</h3>
+                                <h3>A.R. Rahman</h3>
                                 <p>Artist</p>
                             </div>
                         </div>
-                    </a>
 
-                    <div class="card" id="card1">
-                        <div class="photo">
-                            <img src="https://i.scdn.co/image/ab67616100005174b19af0ea736c6228d6eb539c" alt="">
-                            <img class="play" src="assests/play.svg">
-                        </div>
-                        <div class="artist-name">
-                            <h3>A.R. Rahman</h3>
-                            <p>Artist</p>
-                        </div>
-                    </div>
-
-                    <div class="card" id="card1">
-                        <div class="photo">
-                            <img src="https://i.scdn.co/image/ab676161000051746220fc5e958ab498b96f5835" alt="">
-                            <img class="play" src="assests/play.svg">
-                        </div>
-                        <div class="artist-name">
-                            <h3>Vishal Mishra</h3>
-                            <p>Artist</p>
-                        </div>
-
-                    </div>
-                    <div class="card" id="card1">
-                        <div class="photo">
-                            <img src="https://i.scdn.co/image/ab67616100005174c40600e02356cc86f0debe84" alt="">
-                            <img class="play" src="assests/play.svg">
-                        </div>
-                        <div class="artist-name">
-                            <h3>Atif Aslam</h3>
-                            <p>Artist</p>
-                        </div>
-
-                    </div>
-                </div>
-            </div>
-            <div id="pal" class="boxes bg-grey">
-                <div class="navartist">
-                    <a href="page1.html">
-                        <h2>Popular albums</h2>
-                    </a>
-                    <a href="page1.html">
-                        <p>Show all</p>
-                    </a>
-                </div>
-                <div class="cardcontainer">
-                    <div class="card">
-                        <div class="photo">
-                            <img src="https://i.scdn.co/image/ab67616d00001e025f3ede47954a93aa03efe5f9" alt="">
-                            <img class="play" src="assests/play.svg">
-                        </div>
-                        <div class="artist-name">
-                            <h3>ANIMAL</h3>
-                            <p>Manan Bhardwaj, Vishal Mishra, Janni</p>
+                        <div class="card" id="card1">
+                            <div class="photo">
+                                <img src="https://i.scdn.co/image/ab676161000051746220fc5e958ab498b96f5835" alt="">
+                                <img class="play" src="assests/play.svg">
+                            </div>
+                            <div class="artist-name">
+                                <h3>Vishal Mishra</h3>
+                                <p>Artist</p>
+                            </div>
 
                         </div>
-                    </div>
-                    <div class="card">
-                        <div class="photo">
-                            <img src="https://i.scdn.co/image/ab67616d00001e021a8c4618eda885a406958dd0" alt="">
-                            <img class="play" src="assests/play.svg">
-                        </div>
-                        <div class="artist-name">
-                            <h3>Still Rollin</h3>
-                            <p>Shubh</p>
-                        </div>
+                        <div class="card" id="card1">
+                            <div class="photo">
+                                <img src="https://i.scdn.co/image/ab67616100005174c40600e02356cc86f0debe84" alt="">
+                                <img class="play" src="assests/play.svg">
+                            </div>
+                            <div class="artist-name">
+                                <h3>Atif Aslam</h3>
+                                <p>Artist</p>
+                            </div>
 
-                    </div>
-                    <div class="card">
-                        <div class="photo">
-                            <img src="https://i.scdn.co/image/ab67616d00001e021d1cc2e40d533d7bcebf5dae" alt="">
-                            <img class="play" src="assests/play.svg">
-                        </div>
-                        <div class="artist-name">
-                            <h3>Moosetape</h3>
-                            <p>Sidhu Moose Wala</p>
-                        </div>
-
-                    </div>
-                    <div class="card">
-                        <div class="photo">
-                            <img src="https://i.scdn.co/image/ab67616d00001e02bb25239324c4e16ae01fda36" alt="">
-                            <img class="play" src="assests/play.svg">
-                        </div>
-                        <div class="artist-name">
-                            <h3>Ek Tha Raja</h3>
-                            <p>Badshah</p>
-                        </div>
-
-                    </div>
-                    <div class="card">
-                        <div class="photo">
-                            <img src="https://i.scdn.co/image/ab67616d00001e02c5545f737b16ad5ee767b62a" alt="">
-                            <img class="play" src="assests/play.svg">
-                        </div>
-                        <div class="artist-name">
-                            <h3>Kabir Singh</h3>
-                            <p>Various Artists</p>
                         </div>
                     </div>
                 </div>
-            </div>
-            <div id="pr" class="boxes bg-grey">
-                <div class="navartist">
-                    <a href="page2.html">
-                        <h2>Popular radio</h2>
-                    </a>
-                    <a href="page2.html">
-                        <p>Show all</p>
-                    </a>
-                </div>
-
-                <div class="cardcontainer">
-                    <div class="card">
-                        <div class="photo">
-                            <img src="https://seeded-session-images.scdn.co/v2/img/122/secondary/artist/4PULA4EFzYTrxYvOVlwpiQ/en-GB"
-                                alt="">
-                            <img class="play" src="assests/play.svg">
-                        </div>
-                        <div class="artist-name">
-                            <h3>Arijit Singh Radio</h3>
-                            <p>With Neha Kakkar, Pritam, KK and more</p>
-                        </div>
-
+                <div id="pal" class="boxes bg-grey">
+                    <div class="navartist">
+                        <a href="page1.html">
+                            <h2>Popular albums</h2>
+                        </a>
+                        <a href="page1.html">
+                            <p>Show all</p>
+                        </a>
                     </div>
-                    <div class="card">
-                        <div class="photo">
-                            <img src="https://seeded-session-images.scdn.co/v2/img/122/secondary/artist/2FKWNmZWDBZR4dE5KX4plR/en-GB"
-                                alt="">
-                            <img class="play" src="assests/play.svg">
-                        </div>
-                        <div class="artist-name">
-                            <h3>Diljit Dosanjh Radio</h3>
-                            <p>With Garry Sandhu, Ranjit Bawa, Amrinder Gill and more</p>
-                        </div>
+                    <div class="cardcontainer">
+                        <div class="card">
+                            <div class="photo">
+                                <img src="https://i.scdn.co/image/ab67616d00001e025f3ede47954a93aa03efe5f9" alt="">
+                                <img class="play" src="assests/play.svg">
+                            </div>
+                            <div class="artist-name">
+                                <h3>ANIMAL</h3>
+                                <p>Manan Bhardwaj, Vishal Mishra, Janni</p>
 
-                    </div>
-                    <div class="card">
-                        <div class="photo">
-                            <img src="https://seeded-session-images.scdn.co/v2/img/122/secondary/artist/4K6blSRoklNdpw4mzLxwfn/en-GB"
-                                alt="">
-                            <img class="play" src="assests/play.svg">
+                            </div>
                         </div>
-                        <div class="artist-name">
-                            <h3>Kumar Sanu Radio</h3>
-                            <p>With Udit Narayan, Alka Yagnik, Anuradha Paudwal an</p>
-                        </div>
+                        <div class="card">
+                            <div class="photo">
+                                <img src="https://i.scdn.co/image/ab67616d00001e021a8c4618eda885a406958dd0" alt="">
+                                <img class="play" src="assests/play.svg">
+                            </div>
+                            <div class="artist-name">
+                                <h3>Still Rollin</h3>
+                                <p>Shubh</p>
+                            </div>
 
-                    </div>
-                    <div class="card">
-                        <div class="photo">
-                            <img src="https://seeded-session-images.scdn.co/v2/img/122/secondary/artist/4fEkbug6kZzzJ8eYX6Kbbp/en-GB"
-                                alt="">
-                            <img class="play" src="assests/play.svg">
                         </div>
-                        <div class="artist-name">
-                            <h3>KK Radio</h3>
-                            <p>With Mohit Chauhan, Ankit Tiwari, Javed Ali and more</p>
-                        </div>
+                        <div class="card">
+                            <div class="photo">
+                                <img src="https://i.scdn.co/image/ab67616d00001e021d1cc2e40d533d7bcebf5dae" alt="">
+                                <img class="play" src="assests/play.svg">
+                            </div>
+                            <div class="artist-name">
+                                <h3>Moosetape</h3>
+                                <p>Sidhu Moose Wala</p>
+                            </div>
 
-                    </div>
-                    <div class="card">
-                        <div class="photo">
-                            <img src="https://seeded-session-images.scdn.co/v2/img/122/secondary/artist/5r3wPya2PpeTTsXsGhQU8O/en-GB"
-                                alt="">
-                            <img class="play" src="assests/play.svg">
                         </div>
-                        <div class="artist-name">
-                            <h3>Shubh Radio</h3>
-                            <p>With AP Dhillon, Gurinder Gill, Ikky and more</p>
+                        <div class="card">
+                            <div class="photo">
+                                <img src="https://i.scdn.co/image/ab67616d00001e02bb25239324c4e16ae01fda36" alt="">
+                                <img class="play" src="assests/play.svg">
+                            </div>
+                            <div class="artist-name">
+                                <h3>Ek Tha Raja</h3>
+                                <p>Badshah</p>
+                            </div>
+
+                        </div>
+                        <div class="card">
+                            <div class="photo">
+                                <img src="https://i.scdn.co/image/ab67616d00001e02c5545f737b16ad5ee767b62a" alt="">
+                                <img class="play" src="assests/play.svg">
+                            </div>
+                            <div class="artist-name">
+                                <h3>Kabir Singh</h3>
+                                <p>Various Artists</p>
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
-            <div id="fc" class="boxes bg-grey">
-                <div class="navartist">
-                    <a href="page3.html">
-                        <h2>Featured Charts</h2>
-                    </a>
-                    <a href="page3.html">
-                        <p>Show all</p>
-                    </a>
-
-                </div>
-
-                <div class="cardcontainer">
-                    <div class="card">
-                        <div class="photo">
-                            <img src="https://charts-images.scdn.co/assets/locale_en/regional/weekly/region_global_default.jpg"
-                                alt="">
-                            <img class="play" src="assests/play.svg">
-                        </div>
-                        <div class="artist-name">
-                            <h3>Top Songs - Global</h3>
-                            <p>Your weekly update of the most played tracks right now- Global.</p>
-                        </div>
-
+                <div id="pr" class="boxes bg-grey">
+                    <div class="navartist">
+                        <a href="page2.html">
+                            <h2>Popular radio</h2>
+                        </a>
+                        <a href="page2.html">
+                            <p>Show all</p>
+                        </a>
                     </div>
-                    <div class="card">
-                        <div class="photo">
-                            <img src="https://charts-images.scdn.co/assets/locale_en/regional/weekly/region_us_default.jpg"
-                                alt="">
-                            <img class="play" src="assests/play.svg">
-                        </div>
-                        <div class="artist-name">
-                            <h3>Top Songs - USA</h3>
-                            <p>Your weekly update of the most played tracks right now - USA.</p>
-                        </div>
 
-                    </div>
-                    <div class="card">
-                        <div class="photo">
-                            <img src="https://charts-images.scdn.co/assets/locale_en/regional/daily/region_global_default.jpg"
-                                alt="">
-                            <img class="play" src="assests/play.svg">
-                        </div>
-                        <div class="artist-name">
-                            <h3>Top 50 - Global</h3>
-                            <p>Your daily update of the most played tracks right now- Global.</p>
-                        </div>
+                    <div class="cardcontainer">
+                        <div class="card">
+                            <div class="photo">
+                                <img src="https://seeded-session-images.scdn.co/v2/img/122/secondary/artist/4PULA4EFzYTrxYvOVlwpiQ/en-GB"
+                                    alt="">
+                                <img class="play" src="assests/play.svg">
+                            </div>
+                            <div class="artist-name">
+                                <h3>Arijit Singh Radio</h3>
+                                <p>With Neha Kakkar, Pritam, KK and more</p>
+                            </div>
 
-                    </div>
-                    <div class="card">
-                        <div class="photo">
-                            <img src="https://charts-images.scdn.co/assets/locale_en/regional/daily/region_us_default.jpg"
-                                alt="">
-                            <img class="play" src="assests/play.svg">
                         </div>
-                        <div class="artist-name">
-                            <h3>Top 50 - USA</h3>
-                            <p>Your daily update of the most played tracks right now - USA.</p>
-                        </div>
+                        <div class="card">
+                            <div class="photo">
+                                <img src="https://seeded-session-images.scdn.co/v2/img/122/secondary/artist/2FKWNmZWDBZR4dE5KX4plR/en-GB"
+                                    alt="">
+                                <img class="play" src="assests/play.svg">
+                            </div>
+                            <div class="artist-name">
+                                <h3>Diljit Dosanjh Radio</h3>
+                                <p>With Garry Sandhu, Ranjit Bawa, Amrinder Gill and more</p>
+                            </div>
 
-                    </div>
-                    <div class="card">
-                        <div class="photo">
-                            <img src="https://charts-images.scdn.co/assets/locale_en/viral/daily/region_global_default.jpg"
-                                alt="">
-                            <img class="play" src="assests/play.svg">
                         </div>
-                        <div class="artist-name">
-                            <h3>Viral 50 - Global</h3>
-                            <p>Your daily update of the most viral tracks right now- Global.</p>
-                        </div>
+                        <div class="card">
+                            <div class="photo">
+                                <img src="https://seeded-session-images.scdn.co/v2/img/122/secondary/artist/4K6blSRoklNdpw4mzLxwfn/en-GB"
+                                    alt="">
+                                <img class="play" src="assests/play.svg">
+                            </div>
+                            <div class="artist-name">
+                                <h3>Kumar Sanu Radio</h3>
+                                <p>With Udit Narayan, Alka Yagnik, Anuradha Paudwal an</p>
+                            </div>
 
+                        </div>
+                        <div class="card">
+                            <div class="photo">
+                                <img src="https://seeded-session-images.scdn.co/v2/img/122/secondary/artist/4fEkbug6kZzzJ8eYX6Kbbp/en-GB"
+                                    alt="">
+                                <img class="play" src="assests/play.svg">
+                            </div>
+                            <div class="artist-name">
+                                <h3>KK Radio</h3>
+                                <p>With Mohit Chauhan, Ankit Tiwari, Javed Ali and more</p>
+                            </div>
+
+                        </div>
+                        <div class="card">
+                            <div class="photo">
+                                <img src="https://seeded-session-images.scdn.co/v2/img/122/secondary/artist/5r3wPya2PpeTTsXsGhQU8O/en-GB"
+                                    alt="">
+                                <img class="play" src="assests/play.svg">
+                            </div>
+                            <div class="artist-name">
+                                <h3>Shubh Radio</h3>
+                                <p>With AP Dhillon, Gurinder Gill, Ikky and more</p>
+                            </div>
+                        </div>
                     </div>
                 </div>
-            </div>
-            <div id="ep" class="boxes bg-grey">
-                <div class="navartist">
-                    <a href="page4.html">
-                        <h2>Spotify Playlists</h2>
-                    </a>
-                    <a href="page4.html">
-                        <p>Show all</p>
-                    </a>
+                <div id="fc" class="boxes bg-grey">
+                    <div class="navartist">
+                        <a href="page3.html">
+                            <h2>Featured Charts</h2>
+                        </a>
+                        <a href="page3.html">
+                            <p>Show all</p>
+                        </a>
+
+                    </div>
+
+                    <div class="cardcontainer">
+                        <div class="card">
+                            <div class="photo">
+                                <img src="https://charts-images.scdn.co/assets/locale_en/regional/weekly/region_global_default.jpg"
+                                    alt="">
+                                <img class="play" src="assests/play.svg">
+                            </div>
+                            <div class="artist-name">
+                                <h3>Top Songs - Global</h3>
+                                <p>Your weekly update of the most played tracks right now- Global.</p>
+                            </div>
+
+                        </div>
+                        <div class="card">
+                            <div class="photo">
+                                <img src="https://charts-images.scdn.co/assets/locale_en/regional/weekly/region_us_default.jpg"
+                                    alt="">
+                                <img class="play" src="assests/play.svg">
+                            </div>
+                            <div class="artist-name">
+                                <h3>Top Songs - USA</h3>
+                                <p>Your weekly update of the most played tracks right now - USA.</p>
+                            </div>
+
+                        </div>
+                        <div class="card">
+                            <div class="photo">
+                                <img src="https://charts-images.scdn.co/assets/locale_en/regional/daily/region_global_default.jpg"
+                                    alt="">
+                                <img class="play" src="assests/play.svg">
+                            </div>
+                            <div class="artist-name">
+                                <h3>Top 50 - Global</h3>
+                                <p>Your daily update of the most played tracks right now- Global.</p>
+                            </div>
+
+                        </div>
+                        <div class="card">
+                            <div class="photo">
+                                <img src="https://charts-images.scdn.co/assets/locale_en/regional/daily/region_us_default.jpg"
+                                    alt="">
+                                <img class="play" src="assests/play.svg">
+                            </div>
+                            <div class="artist-name">
+                                <h3>Top 50 - USA</h3>
+                                <p>Your daily update of the most played tracks right now - USA.</p>
+                            </div>
+
+                        </div>
+                        <div class="card">
+                            <div class="photo">
+                                <img src="https://charts-images.scdn.co/assets/locale_en/viral/daily/region_global_default.jpg"
+                                    alt="">
+                                <img class="play" src="assests/play.svg">
+                            </div>
+                            <div class="artist-name">
+                                <h3>Viral 50 - Global</h3>
+                                <p>Your daily update of the most viral tracks right now- Global.</p>
+                            </div>
+
+                        </div>
+                    </div>
                 </div>
-
-                <div class="cardcontainer">
-                    <div class="card">
-                        <div class="photo">
-                            <img src="https://i.scdn.co/image/ab67656300005f1fde3404901270d81ee3bbc408" alt="">
-                            <img class="play" src="assests/play.svg">
-                        </div>
-                        <div class="artist-name">
-                            <h3>The Ranveer Show</h3>
-                            <p>BeerBiceps</p>
-                        </div>
-
+                <div id="ep" class="boxes bg-grey">
+                    <div class="navartist">
+                        <a href="page4.html">
+                            <h2>Spotify Playlists</h2>
+                        </a>
+                        <a href="page4.html">
+                            <p>Show all</p>
+                        </a>
                     </div>
-                    <div class="card">
-                        <div class="photo">
-                            <img src="https://i.scdn.co/image/ab67656300005f1f9114d741247e2d26a7b48b6f" alt="">
-                            <img class="play" src="assests/play.svg">
-                        </div>
-                        <div class="artist-name">
-                            <h3>Shri Krishna Leela</h3>
-                            <p>Spotify Studios</p>
-                        </div>
 
-                    </div>
-                    <div class="card">
-                        <div class="photo">
-                            <img src="https://i.scdn.co/image/ab67656300005f1f3c0cd1efd66f78f05f13632a" alt="">
-                            <img class="play" src="assests/play.svg">
-                        </div>
-                        <div class="artist-name">
-                            <h3>True Story Bro!</h3>
-                            <p>Spotify</p>
-                        </div>
+                    <div class="cardcontainer">
+                        <div class="card">
+                            <div class="photo">
+                                <img src="https://i.scdn.co/image/ab67656300005f1fde3404901270d81ee3bbc408" alt="">
+                                <img class="play" src="assests/play.svg">
+                            </div>
+                            <div class="artist-name">
+                                <h3>The Ranveer Show</h3>
+                                <p>BeerBiceps</p>
+                            </div>
 
-                    </div>
-                    <div class="card">
-                        <div class="photo">
-                            <img src="https://i.scdn.co/image/ab67656300005f1fd9b9f8b38f00230d9ffc392f" alt="">
-                            <img class="play" src="assests/play.svg">
                         </div>
-                        <div class="artist-name">
-                            <h3>Best Love Stories</h3>
-                            <p>Spotify Studios</p>
-                        </div>
+                        <div class="card">
+                            <div class="photo">
+                                <img src="https://i.scdn.co/image/ab67656300005f1f9114d741247e2d26a7b48b6f" alt="">
+                                <img class="play" src="assests/play.svg">
+                            </div>
+                            <div class="artist-name">
+                                <h3>Shri Krishna Leela</h3>
+                                <p>Spotify Studios</p>
+                            </div>
 
-                    </div>
-                    <div class="card">
-                        <div class="photo">
-                            <img src="https://i.scdn.co/image/ab67656300005f1fa640450d0f9e4367ccf0fa8a" alt="">
-                            <img class="play" src="assests/play.svg">
                         </div>
-                        <div class="artist-name">
-                            <h3>Gopu Sudhakar</h3>
-                            <p>Spotify Studios</p>
-                        </div>
+                        <div class="card">
+                            <div class="photo">
+                                <img src="https://i.scdn.co/image/ab67656300005f1f3c0cd1efd66f78f05f13632a" alt="">
+                                <img class="play" src="assests/play.svg">
+                            </div>
+                            <div class="artist-name">
+                                <h3>True Story Bro!</h3>
+                                <p>Spotify</p>
+                            </div>
 
+                        </div>
+                        <div class="card">
+                            <div class="photo">
+                                <img src="https://i.scdn.co/image/ab67656300005f1fd9b9f8b38f00230d9ffc392f" alt="">
+                                <img class="play" src="assests/play.svg">
+                            </div>
+                            <div class="artist-name">
+                                <h3>Best Love Stories</h3>
+                                <p>Spotify Studios</p>
+                            </div>
+
+                        </div>
+                        <div class="card">
+                            <div class="photo">
+                                <img src="https://i.scdn.co/image/ab67656300005f1fa640450d0f9e4367ccf0fa8a" alt="">
+                                <img class="play" src="assests/play.svg">
+                            </div>
+                            <div class="artist-name">
+                                <h3>Gopu Sudhakar</h3>
+                                <p>Spotify Studios</p>
+                            </div>
+
+                        </div>
                     </div>
                 </div>
-            </div>
-            <div id="te" class="boxes bg-grey">
-                <div class="navartist">
-                    <a href="page5.html">
-                        <h2>Trending Episodes</h2>
-                    </a>
-                    <a href="page5.html">
-                        <p>Show all</p>
-                    </a>
-
-                </div>
-
-                <div class="cardcontainer">
-                    <div class="card">
-                        <div class="photo">
-                            <img src="https://i.scdn.co/image/ab67656300005f1f83e73525d7790056498af6eb" alt="">
-                            <img class="play" src="assests/play.svg">
-                        </div>
-                        <div class="artist-name">
-                            <h3>Welcome Back, RJ Balaji-Naallanaa Murukku
-                            </h3>
-                            <p>Jun 2021 . 15 min</p>
-                        </div>
+                <div id="te" class="boxes bg-grey">
+                    <div class="navartist">
+                        <a href="page5.html">
+                            <h2>Trending Episodes</h2>
+                        </a>
+                        <a href="page5.html">
+                            <p>Show all</p>
+                        </a>
 
                     </div>
-                    <div class="card">
-                        <div class="photo">
-                            <img src="https://i.scdn.co/image/ab67656300005f1f36dbb0b2d65004488fcc322f" alt="">
-                            <img class="play" src="assests/play.svg">
-                        </div>
-                        <div class="artist-name">
-                            <h3>Mahabharata Episode 1: Beginnings</h3>
-                            <p>April 2014 . 24 min</p>
-                        </div>
 
-                    </div>
-                    <div class="card">
-                        <div class="photo">
-                            <img src="https://i.scdn.co/image/ab67706f000000028998614b3281e12596844039" alt="">
-                            <img class="play" src="assests/play.svg">
-                        </div>
-                        <div class="artist-name">
-                            <h3>Relaxing Rain Sounds for Deep Sleep</h3>
-                            <p>Aug 2019 . 122 min</p>
-                        </div>
+                    <div class="cardcontainer">
+                        <div class="card">
+                            <div class="photo">
+                                <img src="https://i.scdn.co/image/ab67656300005f1f83e73525d7790056498af6eb" alt="">
+                                <img class="play" src="assests/play.svg">
+                            </div>
+                            <div class="artist-name">
+                                <h3>Welcome Back, RJ Balaji-Naallanaa Murukku
+                                </h3>
+                                <p>Jun 2021 . 15 min</p>
+                            </div>
 
-                    </div>
-                    <div class="card">
-                        <div class="photo">
-                            <img src="	https://i.scdn.co/image/ab67656300005f1f6807eaee16197dac1dd840e8" alt="">
-                            <img class="play" src="assests/play.svg">
                         </div>
-                        <div class="artist-name">
-                            <h3>Ep 8 - Ye Na Thi hamari Qismat</h3>
-                            <p>Aug 2020 . 3 min</p>
-                        </div>
+                        <div class="card">
+                            <div class="photo">
+                                <img src="https://i.scdn.co/image/ab67656300005f1f36dbb0b2d65004488fcc322f" alt="">
+                                <img class="play" src="assests/play.svg">
+                            </div>
+                            <div class="artist-name">
+                                <h3>Mahabharata Episode 1: Beginnings</h3>
+                                <p>April 2014 . 24 min</p>
+                            </div>
 
-                    </div>
-                    <div class="card">
-                        <div class="photo">
-                            <img src="https://i.scdn.co/image/ab67656300005f1ff875734f742a55ac2dd62637
+                        </div>
+                        <div class="card">
+                            <div class="photo">
+                                <img src="https://i.scdn.co/image/ab67706f000000028998614b3281e12596844039" alt="">
+                                <img class="play" src="assests/play.svg">
+                            </div>
+                            <div class="artist-name">
+                                <h3>Relaxing Rain Sounds for Deep Sleep</h3>
+                                <p>Aug 2019 . 122 min</p>
+                            </div>
+
+                        </div>
+                        <div class="card">
+                            <div class="photo">
+                                <img src="	https://i.scdn.co/image/ab67656300005f1f6807eaee16197dac1dd840e8" alt="">
+                                <img class="play" src="assests/play.svg">
+                            </div>
+                            <div class="artist-name">
+                                <h3>Ep 8 - Ye Na Thi hamari Qismat</h3>
+                                <p>Aug 2020 . 3 min</p>
+                            </div>
+
+                        </div>
+                        <div class="card">
+                            <div class="photo">
+                                <img src="https://i.scdn.co/image/ab67656300005f1ff875734f742a55ac2dd62637
                                 " alt="">
-                            <img class="play" src="assests/play.svg">
-                        </div>
-                        <div class="artist-name">
-                            <h3>Anubis: God of Death - Part 2</h3>
-                            <p>Jun 2021 . 16 min</p>
-                        </div>
+                                <img class="play" src="assests/play.svg">
+                            </div>
+                            <div class="artist-name">
+                                <h3>Anubis: God of Death - Part 2</h3>
+                                <p>Jun 2021 . 16 min</p>
+                            </div>
 
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
-        <div class="footer-right bg-grey">
-            <div class="flex space-between">
-                <div>
-                    <ul class="flex column" role="list">
-                        <p>Company</p>
-                        <a href="https://www.spotify.com/in-en/about-us/contact/" role="link">
-                            <span>About</span>
-                        </a>
-                        <a href="https://www.lifeatspotify.com/" role="link">
-                            <span>Jobs</span>
-                        </a>
-                        <a href="https://newsroom.spotify.com/" role="link">
-                            <span>For the Record</span>
-                        </a>
-                    </ul>
-                </div>
-                <div>
-                    <ul class="flex column" role="list">
-                        <p>Communities</p>
-                        <a href="https://artists.spotify.com/" role="link">
-                            <span>For Artists</span>
-                        </a>
-                        <a href="https://developer.spotify.com/" role="link">
-                            <span>Developers</span>
-                        </a>
-                        <a href="https://ads.spotify.com/" role="link">
-                            <span>Advertising</span>
-                        </a>
-                        <a href="https://investors.spotify.com/" role="link">
-                            <span>Investors</span>
-                        </a>
-                        <a href="https://spotifyforvendors.com/" role="link">
-                            <span>Vendors</span>
-                        </a>
-                    </ul>
-                </div>
-                <div>
-                    <ul class="flex column" role="list">
-                        <p>Useful links</p>
-                        <a href="https://support.spotify.com/" role="link">
-                            <span>Support</span>
-                        </a>
-                        <a href="https://www.spotify.com/in-en/free/" role="link">
-                            <span>Free Mobile App</span>
-                        </a>
-                    </ul>
-                </div>
-                <div>
-                    <ul class="flex column" role="list">
-                        <p>Spotify Plans</p>
-                        <a href="https://www.spotify.com/in-en/premium" role="link">
-                            <span>Premium Individual</span>
-                        </a>
-                        <a href="https://www.spotify.com/in-en/duo" role="link">
-                            <span>Premium Duo</span>
-                        </a>
-                        <a href="https://www.spotify.com/in-en/family" role="link">
-                            <span>Premium Family</span>
-                        </a>
-                        <a href="https://www.spotify.com/in-en/student" role="link">
-                            <span>Premium Student</span>
-                        </a>
-                        <a href="https://www.spotify.com/in-en/free" role="link">
-                            <span>Spotify Free</span>
-                        </a>
-                    </ul>
-                </div>
-                <div class="flex gap">
-                    <div class="logo2">
-                        <a href="https://instagram.com/spotify" aria-label="Instagram" title="Instagram" target="_blank"
-                            rel="noopener noreferrer">
-                            <div><img class="filter  iconsplus" src="assests/insta.svg" alt=""></div>
-                        </a>
+            <div class="footer-right bg-grey">
+                <div class="foot">
+                    <div>
+                        <ul class="flex column" role="list">
+                            <p>Company</p>
+                            <a href="https://www.spotify.com/in-en/about-us/contact/" role="link">
+                                <span>About</span>
+                            </a>
+                            <a href="https://www.lifeatspotify.com/" role="link">
+                                <span>Jobs</span>
+                            </a>
+                            <a href="https://newsroom.spotify.com/" role="link">
+                                <span>For the Record</span>
+                            </a>
+                        </ul>
                     </div>
-
-                    <div class="logo2">
-                        <a href="https://twitter.com/spotify" aria-label="Twitter" title="Twitter" target="_blank"
-                            rel="noopener noreferrer">
-                            <div> <img class="filter iconsplus" src="assests/twit.svg" alt=""></div>
-                        </a>
+                    <div>
+                        <ul class="flex column" role="list">
+                            <p>Communities</p>
+                            <a href="https://artists.spotify.com/" role="link">
+                                <span>For Artists</span>
+                            </a>
+                            <a href="https://developer.spotify.com/" role="link">
+                                <span>Developers</span>
+                            </a>
+                            <a href="https://ads.spotify.com/" role="link">
+                                <span>Advertising</span>
+                            </a>
+                            <a href="https://investors.spotify.com/" role="link">
+                                <span>Investors</span>
+                            </a>
+                            <a href="https://spotifyforvendors.com/" role="link">
+                                <span>Vendors</span>
+                            </a>
+                        </ul>
                     </div>
+                    <div>
+                        <ul class="flex column" role="list">
+                            <p>Useful links</p>
+                            <a href="https://support.spotify.com/" role="link">
+                                <span>Support</span>
+                            </a>
+                            <a href="https://www.spotify.com/in-en/free/" role="link">
+                                <span>Free Mobile App</span>
+                            </a>
+                        </ul>
+                    </div>
+                    <div>
+                        <ul class="flex column" role="list">
+                            <p>Spotify Plans</p>
+                            <a href="https://www.spotify.com/in-en/premium" role="link">
+                                <span>Premium Individual</span>
+                            </a>
+                            <a href="https://www.spotify.com/in-en/duo" role="link">
+                                <span>Premium Duo</span>
+                            </a>
+                            <a href="https://www.spotify.com/in-en/family" role="link">
+                                <span>Premium Family</span>
+                            </a>
+                            <a href="https://www.spotify.com/in-en/student" role="link">
+                                <span>Premium Student</span>
+                            </a>
+                            <a href="https://www.spotify.com/in-en/free" role="link">
+                                <span>Spotify Free</span>
+                            </a>
+                        </ul>
+                    </div>
+                    <div class="flex gap">
+                        <div class="logo2">
+                            <a href="https://instagram.com/spotify" aria-label="Instagram" title="Instagram"
+                                target="_blank" rel="noopener noreferrer">
+                                <div><img class="filter  iconsplus" src="assests/insta.svg" alt=""></div>
+                            </a>
+                        </div>
 
-                    <div class="logo2">
-                        <a href="https://facebook.com/spotify" aria-label="Facebook" title="Facebook" target="_blank"
-                            rel="noopener noreferrer">
-                            <div> <img class="filter iconsplus" src="assests/fb.svg" alt=""></div>
-                        </a>
+                        <div class="logo2">
+                            <a href="https://twitter.com/spotify" aria-label="Twitter" title="Twitter" target="_blank"
+                                rel="noopener noreferrer">
+                                <div> <img class="filter iconsplus" src="assests/twit.svg" alt=""></div>
+                            </a>
+                        </div>
+
+                        <div class="logo2">
+                            <a href="https://facebook.com/spotify" aria-label="Facebook" title="Facebook"
+                                target="_blank" rel="noopener noreferrer">
+                                <div> <img class="filter iconsplus" src="assests/fb.svg" alt=""></div>
+                            </a>
+                        </div>
                     </div>
                 </div>
             </div>
+            <hr>
+            <div class="section bg-grey">
+                <span> &#169 2024 Spotify AB</span>
+            </div>
         </div>
-        <hr>
-        <div class="section bg-grey">
-            <span> &#169 2024 Spotify AB</span>
-        </div>
     </div>
     </div>
-    </div>
-
 </body>
+<script>
+    function openNav() {
+        document.getElementById("myNav").style.height = "100%";
+    }
+
+    function closeNav() {
+        document.getElementById("myNav").style.height = "0%";
+    }
+</script>
 
 </html>

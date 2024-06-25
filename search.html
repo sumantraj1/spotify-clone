@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="search.css">
     <link rel="stylesheet" href="utility.css">
     <link rel="stylesheet" href="hover.css">
+    <link rel="stylesheet" href="phone.css">
     <script src="search.js"></script>
 </head>
 
@@ -21,7 +22,8 @@
                     <a href="index.html">
                         <li class="flex items-center"><img class="invert" src="assests/home.svg" alt="home">Home</li>
                     </a>
-                        <li id="search-icon" class="flex items-center"><img class="invert" src="assests/search.svg" alt="search">Search</li>
+                    <li id="search-icon" class="flex items-center"><img class="invert" src="assests/search.svg"
+                            alt="search">Search</li>
                 </ul>
             </div>
 
@@ -32,7 +34,8 @@
                         <h4>Your Library</h4>
                     </div>
                     <div>
-                        <img title="Create playlist or folder" class="plus invert iconsplus" src="assests/plus.svg" alt="">
+                        <img title="Create playlist or folder" class="plus invert iconsplus" src="assests/plus.svg"
+                            alt="">
                     </div>
                 </div>
 
@@ -106,8 +109,39 @@
                         <div class="icon">
                             <img class="iconsplus filter" src="assests/search.svg" alt="">
                         </div>
-                        <input type="text" class="search-input" id="search-input" placeholder="What do you want to play?" onkeypress="handleKeyPress(event)" >
+                        <input type="text" class="search-input" id="search-input"
+                            placeholder="What do you want to play?" onkeypress="handleKeyPress(event)">
                         <div class="clear-icon" id="clear-icon" style="display: none;">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
+                                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                                class="feather feather-x">
+                                <line x1="18" y1="6" x2="6" y2="18"></line>
+                                <line x1="6" y1="6" x2="18" y2="18"></line>
+                            </svg>
+                        </div>
+                    </div>
+                </div>
+                <div class="buttons">
+                    <button class="signup navcolor-dark"><a
+                            href="signup.html">Sign
+                            up</a></button>
+                    <button class="login"><a
+                            href="login.html">Log
+                            in</a></button>
+                </div>
+            </div>
+
+            <div class="header-2 navcolor-dark">
+                <div class="nav flex items-center">
+                    <div>
+                        <a href="index.html"><img src="assests/navleft.svg" alt=""></a>
+                    </div>
+                    <div class="search-bar" id="search-bar2">
+                        <div class="icon">
+                            <img class="iconsplus filter" src="assests/search.svg" alt="">
+                        </div>
+                        <input type="text" class="search-input" id="search-input2" placeholder="What do you want to play?" onkeypress="handleKeyPress(event)" >
+                        <div class="clear-icon" id="clear-icon2" style="display: none;">
                             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
                                 stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-x">
                                 <line x1="18" y1="6" x2="6" y2="18"></line>
@@ -115,22 +149,25 @@
                             </svg>
                         </div>
                     </div>
-            </div>
-                <div class="buttons">
-                    <button class="signup navcolor-dark"><a
-                            href="https://www.spotify.com/in-en/signup?forward_url=https%3A%2F%2Fopen.spotify.com%2F">Sign
-                            up</a></button>
-                    <button class="login"><a
-                            href="https://accounts.spotify.com/en-GB/login?continue=https%3A%2F%2Fopen.spotify.com%2F">Log
-                            in</a></button>
+                </div>
+                
+                    <div style="font-size:25px;" onclick="openNav()">&#9776;</div>
+
+                <div id="myNav" class="overlay">
+                    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+                    <div class="overlay-content">
+                        <a href="signup.html">SignUp</a>
+                        <a href="login.html">LogIn</a>
+                        <a href="#">Explore Premium</a>
+                        <a href="podcastpage.html">Browse Podcasts</a>
+                    </div>
                 </div>
             </div>
-
             <div id="homes" class="flex column">
 
                 <div class="boxes-podcast bg-grey">
                     <div class="navartist">
-                            <h2>Browse all</h2>
+                        <h2>Browse all</h2>
                     </div>
 
                     <div class="cardcontainer-podcast">
@@ -255,7 +292,7 @@
 
 
             <div class="footer-right bg-grey">
-                <div class="flex space-between">
+                <div class="foot">
                     <div>
                         <ul class="flex column" role="list">
                             <p>Company</p>

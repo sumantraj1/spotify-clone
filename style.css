@@ -8,18 +8,21 @@ body {
     background-color: black;
 
 }
-body a{
+
+body a {
     color: white;
     text-decoration: none;
 }
+
 .spacer {
     height: 8px;
-    background-color: rgb(0, 0, 0); 
+    background-color: rgb(0, 0, 0);
     position: fixed;
     width: 100%;
     top: 0;
-    z-index: 1; 
-  }
+    z-index: 1;
+}
+
 #left {
     width: 24vw;
     position: fixed;
@@ -105,9 +108,11 @@ h4 {
     color: #a7a7a7;
 
 }
-.heading img{
+
+.heading img {
     filter: invert(.6);
 }
+
 .scroll {
     height: 200px;
 }
@@ -115,7 +120,7 @@ h4 {
 .footer-left {
     display: flex;
     font-size: 13px;
-    padding:40px 10px;
+    padding: 40px 10px;
     flex-direction: row;
     flex-wrap: wrap;
     gap: 15px
@@ -143,25 +148,80 @@ h4 {
     position: sticky;
     top: 8px;
     z-index: 1;
-    border-radius:10px 10px 0 0 ;
-    width: 1153px;
+    border-radius: 10px 10px 0 0;
+}
 
+.header-2 {
+    justify-content: space-between;
+    height: 50px;
+    position: sticky;
+    top: 0;
+    z-index: 1;
+    align-items: center;
+    padding-right: 10px;
+    display: none;
+}
+.phlogo{
+    margin-left: 15px;
+}
+.overlay {
+    height: 0%;
+    width: 100%;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.9);
+    overflow-y: hidden;
+    transition: 0.5s;
+}
+
+.overlay-content {
+    position: relative;
+    top: 10%;
+    width: 100%;
+    text-align: left;
+}
+
+.overlay a {
+    padding: 12px 20px;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 700;
+    color: white;
+    display: block;
+    transition: 0.3s;
+}
+
+.overlay a:hover,
+.overlay a:focus {
+    color: #8b8787;
+}
+
+.overlay .closebtn {
+    position: absolute;
+    right: 0px;
+    font-size: 40px;
 }
 
 .boxes {
-    padding: 30px 10px;
-    width: 1132px;
+    padding: 30px 7px;
 }
 
 .cardcontainer {
     display: flex;
     justify-content: space-between;
-     
+    overflow-x: auto;
+    
+}
+.cardcontainer::-webkit-scrollbar {
+    display: none;
 }
 
 .card {
-    width: 226px;
-
+    width: 219px;
+    justify-content: center;
+    display: grid;
 
 }
 
@@ -173,9 +233,11 @@ h4 {
     padding: 10px;
 
 }
-.card .artist-name{
+
+.card .artist-name {
     padding: 0 10px 10px 10px;
 }
+
 #card1 img {
     border-radius: 50%;
 }
@@ -191,18 +253,20 @@ h4 {
 }
 
 h3 {
-    white-space: nowrap;     
-    overflow: hidden; 
-    text-overflow: ellipsis; 
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
     width: 200px;
     /* padding-top: 6px; */
     font-size: 16px;
     font-weight: 400;
 }
-h2{
+
+h2 {
     font-size: 24px;
 }
-.card p{
+
+.card p {
     width: 200px;
     display: -webkit-box;
     -webkit-line-clamp: 2;
@@ -212,6 +276,7 @@ h2{
     font-size: 14px;
     padding-top: 4px;
 }
+
 p {
     color: rgb(198, 191, 191);
 }
@@ -244,7 +309,13 @@ p {
 
 .footer-right {
     padding: 40px;
-    width: 1072px;
+}
+
+.foot {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 10px;
 }
 
 .footer-right ul {
@@ -270,16 +341,13 @@ p {
     padding: 9px;
 
 }
-hr{
-    width: 1072px;
-    margin-left:37px;
-}
+
+
 .section {
     padding: 40px;
     color: rgb(157, 157, 157);
     font-size: 14px;
     font-weight: 500;
-    width: 1072px;
 }
 
 .photo {

@@ -87,7 +87,12 @@
 .iconsplus{
     height: 18px;
 }
-
+.iconsm{
+    height: 20px;
+}
+.gapm{
+    gap: 20px;
+}
   .gap{
     gap: 10px;
 }
